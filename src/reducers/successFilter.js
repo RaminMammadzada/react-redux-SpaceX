@@ -1,6 +1,6 @@
 import { SUCCESS_FILTER } from '../constants/action-types';
 
-const initialState = 2000;
+const initialState = 'All';
 
 export default function successFilter(state = initialState, action) {
   if (action.type === SUCCESS_FILTER) {

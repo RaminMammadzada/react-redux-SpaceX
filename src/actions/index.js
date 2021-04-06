@@ -23,7 +23,7 @@ export function fetchData(url) {
   return function thunk(dispatch) {
     fetch(url).then((response) => response.json())
       .then((json) => {
-        console.log('DATA: ', json);
+        // console.log('DATA: ', json);
         dispatch(setAllMissions(json));
       })
       .catch((error) => console.log('Error: ', error.message));

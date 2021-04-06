@@ -1,40 +1,84 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import YearFilter from '../components/YearFilter';
+import Filter from '../components/Filter';
 import Mission from './Mission';
-import { yearChanged } from '../actions';
+import { yearChanged, successChanged } from '../actions';
 
 const MissionList = () => {
-  const { missions, yearFilter } = useSelector((state) => state);
+  const { missions, yearFilter, successFilter } = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  console.log('Missions: ', missions);
 
   // successFilter(true);
 
-  const handleYearFilterChange = (event) => {
-    event.preventDefault();
-    const year = event.target.value;
-    dispatch(yearChanged(year));
+  let currentMissionList;
+
+  const updateCurrentMissionList = (yearFilter, successCaseFilter) => {
+    if (yearFilter === 'All' && successCaseFilter === 'All') {
+      currentMissionList = missions.concat();
+    } else if (yearFilter !== 'All' && successCaseFilter !== 'All') {
+      if (successCaseFilter === 'Yes') {
+        currentMissionList = missions.filter(
+          (mission) => (mission.launch_year.toString() === yearFilter.toString()
+            && mission.launch_success === true),
+        );
+      }
+
+      if (successCaseFilter === 'No') {
+        currentMissionList = missions.filter(
+          (mission) => (mission.launch_year.toString() === yearFilter.toString()
+            && mission.launch_success === false),
+        );
+      }
+    } else if (yearFilter === 'All' && successCaseFilter !== 'All') {
+      if (successCaseFilter === 'Yes') {
+        currentMissionList = missions.filter(
+          (mission) => mission.launch_success === true,
+        );
+      }
+
+      if (successCaseFilter === 'No') {
+        currentMissionList = missions.filter(
+          (mission) => mission.launch_success === false,
+        );
+      }
+    } else if (yearFilter !== 'All' && successCaseFilter === 'All') {
+      currentMissionList = missions.filter(
+        (mission) => mission.launch_year.toString() === yearFilter.toString(),
+      );
+    }
+
+    // if (yearFilter === 'All') {
+    //   currentMissionList = missions.concat();
+    // } else {
+    //   currentMissionList = missions.filter(
+    //     (mission) => mission.launch_year.toString() === yearFilter.toString(),
+    //   );
+    //   console.log('currentMissionList: ', currentMissionList);
+    // }
   };
 
-  let currentMissionList;
-  if (yearFilter === 'All') {
-    currentMissionList = missions.concat();
-  } else {
-    currentMissionList = missions.filter(
-      (mission) => mission.launch_year.toString() === yearFilter.toString(),
-    );
-    console.log('currentMissionList: ', currentMissionList);
-  }
+  updateCurrentMissionList(yearFilter, successFilter);
+
+  const handleFilterChange = (event) => {
+    event.preventDefault();
+
+    if (event.target.name === 'year') {
+      const year = event.target.value;
+      dispatch(yearChanged(year));
+    }
+
+    if (event.target.name === 'successCase') {
+      const successCase = event.target.value;
+      dispatch(successChanged(successCase));
+    }
+  };
 
   return (
     <div>
       <div className="header">
         <div className="header-navbar">
-          <h1 className="bookstote-cms">Bookstrote CMS</h1>
-          <h2 className="books-text-in-header">Books</h2>
-          <YearFilter handleChange={handleYearFilterChange} />
+          <h1 className="bookstote-cms">Launch Missions</h1>
+          <Filter handleChange={handleFilterChange} />
         </div>
       </div>
       <div>
