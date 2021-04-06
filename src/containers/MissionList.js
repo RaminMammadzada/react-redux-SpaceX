@@ -1,46 +1,34 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { successFilter } from '../actions';
+import { useSelector } from 'react-redux';
+import Mission from './Mission';
 
-const MissionList = (props) => {
-  const {
-    missions,
-    successFilter,
-  } = props;
+const MissionList = () => {
+  const { missions } = useSelector((state) => state);
 
   console.log('Missions: ', missions);
 
-  successFilter(true);
+  // successFilter(true);
 
   return (
     <div>
       {missions.map((mission) => (
-        <p
-          key={Math.floor(Math.random() * 100)}
-        >
-          {mission.name}
-        </p>
+        <Mission
+          key={mission.launch_date_unix}
+          missionImage={mission.links.mission_patch_small}
+          missionName={mission.mission_name}
+          launchYear={mission.launch_year}
+        />
       ))}
     </div>
   );
 };
 
 MissionList.propTypes = {
-  missions: PropTypes.arrayOf(PropTypes.object),
-  successFilter: PropTypes.func.isRequired,
+  // successFilter: PropTypes.func.isRequired,
 };
 
 MissionList.defaultProps = {
   missions: [{}, {}],
 };
 
-const mapStateToProps = (state) => ({
-  missions: state.missions,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  successFilter: (successCase) => dispatch(successFilter(successCase)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(MissionList);
+export default MissionList;
