@@ -1,14 +1,14 @@
 import {
-  CONSTANT1,
-  CONSTANT2,
+  SUCCESS_CASE,
+  MISSION_YEAR,
 } from '../constants/action-types';
 
-export const changeFilter1 = () => ({
-  type: CONSTANT1,
-  payload: 'samplepayload1',
+export const successFilter = (res) => ({
+  type: SUCCESS_CASE,
+  payload: res,
 });
 
-export const changeFilter2 = () => ({
-  type: CONSTANT2,
-  payload: 'samplepayload2',
+export const missionFilter = (res) => ({
+  type: MISSION_YEAR,
+  payload: res,
 });

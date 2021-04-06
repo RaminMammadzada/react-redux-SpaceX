@@ -1,2 +1,2 @@
-export const CONSTANT1 = 'CONSTANT1';
-export const CONSTANT2 = 'CONSTANT2';
+export const SUCCESS_CASE = 'SUCCESSCASE';
+export const MISSION_YEAR = 'MISSION_YEAR';
