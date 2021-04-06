@@ -10,6 +10,7 @@ class Missions extends Component {
     return (
       <div>
         <p>Missions</p>
+        {/* <MissionList /> */}
       </div>
     );
   }
