@@ -1,3 +1,3 @@
-export const SUCCESS_CASE = 'SUCCESSCASE';
-export const MISSION_YEAR = 'MISSION_YEAR';
+export const SUCCESS_FILTER = 'SUCCESSCASE';
+export const YEAR_FILTER = 'YEAR_FILTER';
 export const ALL_MISSIONS = 'ALL_MISSIONS';

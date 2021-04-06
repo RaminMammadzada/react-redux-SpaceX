@@ -1,17 +1,17 @@
 import {
-  SUCCESS_CASE,
-  MISSION_YEAR,
+  SUCCESS_FILTER,
+  YEAR_FILTER,
   ALL_MISSIONS,
 } from '../constants/action-types';
 
-export const successFilter = (res) => ({
-  type: SUCCESS_CASE,
-  payload: res,
+export const successChanged = (successCase) => ({
+  type: SUCCESS_FILTER,
+  payload: successCase,
 });
 
-export const missionFilter = (res) => ({
-  type: MISSION_YEAR,
-  payload: res,
+export const yearChanged = (year) => ({
+  type: YEAR_FILTER,
+  payload: year,
 });
 
 export const setAllMissions = (allMissions) => ({

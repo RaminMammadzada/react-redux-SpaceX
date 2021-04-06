@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import filter from './filter';
+import yearFilter from './yearFilter';
+import successFilter from './successFilter';
 import missions from './missions';
 
 export default combineReducers({
-  filter,
+  successFilter,
+  yearFilter,
   missions,
 });

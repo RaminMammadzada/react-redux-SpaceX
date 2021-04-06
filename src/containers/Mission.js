@@ -6,6 +6,7 @@ const Mission = (props) => {
     missionImage,
     missionName,
     launchYear,
+    launchSuccess,
   } = props;
 
   return (
@@ -13,6 +14,7 @@ const Mission = (props) => {
       <img src={missionImage} alt={missionName} />
       <h5>{missionName}</h5>
       <h5>{launchYear}</h5>
+      <h5>{launchSuccess ? 'YES' : 'NO'}</h5>
     </div>
   );
 };
@@ -21,11 +23,13 @@ Mission.propTypes = {
   missionImage: PropTypes.string,
   missionName: PropTypes.string,
   launchYear: PropTypes.string.isRequired,
+  launchSuccess: PropTypes.bool,
 };
 
 Mission.defaultProps = {
   missionImage: 'https:',
   missionName: 'name',
+  launchSuccess: true,
 };
 
 export default Mission;

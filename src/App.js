@@ -7,7 +7,7 @@ import { fetchData } from './actions';
 const App = () => {
   const dispatch = useDispatch();
 
-  const url = 'https://api.spacexdata.com/v3/launches?limit=5&offset=5';
+  const url = 'https://api.spacexdata.com/v3/launches?limit=500&offset=5';
   dispatch(fetchData(url));
 
   return (

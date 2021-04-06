@@ -10,7 +10,6 @@ const Routes = () => (
     <Switch>
       <Route path="/about" component={About} />
       <Route path="/missions" component={Missions} />
-      <Route path="/" component={Missions} />
     </Switch>
   </BrowserRouter>
 );
