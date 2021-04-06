@@ -10,7 +10,6 @@ class Missions extends Component {
   render() {
     return (
       <div>
-        <p>Missions</p>
         <MissionList />
       </div>
     );
