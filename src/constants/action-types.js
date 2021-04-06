@@ -1,2 +1,3 @@
-export const CONSTANT1 = 'CONSTANT1';
-export const CONSTANT2 = 'CONSTANT2';
+export const SUCCESS_FILTER = 'SUCCESSCASE';
+export const YEAR_FILTER = 'YEAR_FILTER';
+export const ALL_MISSIONS = 'ALL_MISSIONS';

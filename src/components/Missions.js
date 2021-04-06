@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MissionList from '../containers/MissionList';
 
 class Missions extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Missions extends Component {
     return (
       <div>
         <p>Missions</p>
-        {/* <MissionList /> */}
+        <MissionList />
       </div>
     );
   }
