@@ -48,15 +48,6 @@ const MissionList = () => {
         (mission) => mission.launch_year.toString() === yearFilter.toString(),
       );
     }
-
-    // if (yearFilter === 'All') {
-    //   currentMissionList = missions.concat();
-    // } else {
-    //   currentMissionList = missions.filter(
-    //     (mission) => mission.launch_year.toString() === yearFilter.toString(),
-    //   );
-    //   console.log('currentMissionList: ', currentMissionList);
-    // }
   };
 
   updateCurrentMissionList(yearFilter, successFilter);
@@ -84,16 +75,23 @@ const MissionList = () => {
         </div>
       </div>
       <div className="d-flex flex-wrap justify-content-center">
-        {currentMissionList.map((mission) => (
-          <Mission
-            key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
-            missionImage={mission.links.mission_patch_small}
-            missionName={mission.mission_name}
-            launchYear={mission.launch_year}
-            launchSuccess={mission.launch_success}
-            missionId={mission.flight_number}
-          />
-        ))}
+        {currentMissionList.map((mission) => {
+          let missionImageLink = 'https://via.placeholder.com/250x250/555555/FFFFFF?text=Image+Not+Found';
+          if (mission.links.mission_patch_small !== null) {
+            missionImageLink = mission.links.mission_patch_small;
+          }
+
+          return (
+            <Mission
+              key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
+              missionImage={missionImageLink}
+              missionName={mission.mission_name}
+              launchYear={mission.launch_year}
+              launchSuccess={mission.launch_success}
+              missionId={mission.flight_number}
+            />
+          );
+        })}
       </div>
     </div>
   );
