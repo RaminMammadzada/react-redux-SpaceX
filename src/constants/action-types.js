@@ -1,3 +1,4 @@
 export const SUCCESS_FILTER = 'SUCCESSCASE';
 export const YEAR_FILTER = 'YEAR_FILTER';
 export const ALL_MISSIONS = 'ALL_MISSIONS';
+export const CURRENT_MISSION = 'CURRENT_MISSION';

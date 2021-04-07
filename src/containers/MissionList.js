@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
@@ -84,19 +84,14 @@ const MissionList = () => {
       </div>
       <div>
         {currentMissionList.map((mission) => (
-          <Link
+          <Mission
             key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
-            to={`mission/${mission.flight_number}`}
-          >
-            <Mission
-              key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
-              missionImage={mission.links.mission_patch_small}
-              missionName={mission.mission_name}
-              launchYear={mission.launch_year}
-              launchSuccess={mission.launch_success}
-              missionId={mission.flight_number}
-            />
-          </Link>
+            missionImage={mission.links.mission_patch_small}
+            missionName={mission.mission_name}
+            launchYear={mission.launch_year}
+            launchSuccess={mission.launch_success}
+            missionId={mission.flight_number}
+          />
         ))}
       </div>
     </div>

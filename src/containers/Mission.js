@@ -14,7 +14,7 @@ const Mission = (props) => {
   return (
     <div>
       <img src={missionImage} alt={missionName} />
-      <Link to={`/users/${missionId}`}>
+      <Link to={`/mission/${missionId}`}>
         {' '}
         {missionName}
       </Link>
