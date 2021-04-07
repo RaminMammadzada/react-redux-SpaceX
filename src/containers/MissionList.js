@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// import { Link } from 'react-router-dom';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
@@ -89,6 +90,7 @@ const MissionList = () => {
             missionName={mission.mission_name}
             launchYear={mission.launch_year}
             launchSuccess={mission.launch_success}
+            missionId={mission.flight_number}
           />
         ))}
       </div>
