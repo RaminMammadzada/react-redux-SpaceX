@@ -1,7 +1,9 @@
 import React from 'react';
 import PropType from 'prop-types';
+import { Form } from 'react-bootstrap';
 import years from '../constants/years';
 import successCasesTexts from '../constants/successCasesTexts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Filter = (props) => {
   const { handleChange } = props;
@@ -10,38 +12,56 @@ const Filter = (props) => {
 
   return (
     <div>
-      <label htmlFor="years">
-        Launch year:
-        <select
-          onChange={handleChange}
-          name="year"
+      <Form
+        className="d-flex justify-content-start ml-5"
+      >
+        <Form.Group
+          controlId="exampleForm.SelectCustom"
+          className="d-flex align-items-center flex-row mx-5"
         >
-          {yearsExtended.map((year) => (
-            <option
-              key={year}
-              value={year}
-            >
-              {year}
-            </option>
-          ))}
-        </select>
-      </label>
-      <label htmlFor="successCases">
-        Launch success:
-        <select
-          onChange={handleChange}
-          name="successCase"
+          <Form.Label className="pr-3">
+            Year
+          </Form.Label>
+          <Form.Control
+            as="select"
+            onChange={handleChange}
+            name="year"
+            custom
+          >
+            {yearsExtended.map((year) => (
+              <option
+                key={year}
+                value={year}
+              >
+                {year}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+        <Form.Group
+          controlId="exampleForm.SelectCustom"
+          className="d-flex align-items-center flex-row mx-5"
         >
-          {successCases.map((successCase) => (
-            <option
-              key={successCase}
-              value={successCase}
-            >
-              {successCase}
-            </option>
-          ))}
-        </select>
-      </label>
+          <Form.Label className="pr-3">
+            Lauch success
+          </Form.Label>
+          <Form.Control
+            as="select"
+            onChange={handleChange}
+            name="successCase"
+            custom
+          >
+            {successCases.map((successCase) => (
+              <option
+                key={successCase}
+                value={successCase}
+              >
+                {successCase}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form>
     </div>
   );
 };
