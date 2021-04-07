@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MissionList = () => {
   const { missions, yearFilter, successFilter } = useSelector((state) => state);
@@ -82,7 +83,7 @@ const MissionList = () => {
           <Filter handleChange={handleFilterChange} />
         </div>
       </div>
-      <div>
+      <div className="d-flex flex-wrap justify-content-center">
         {currentMissionList.map((mission) => (
           <Mission
             key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}

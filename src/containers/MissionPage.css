@@ -1,9 +1,11 @@
-.single-mission-page {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.mission-details {
+  color: rgb(102, 102, 102);
 }
 
-.mission-details {
-  color: blue;
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  border-bottom: 0.2rem dotted rgb(85, 85, 85, 0.2);
 }

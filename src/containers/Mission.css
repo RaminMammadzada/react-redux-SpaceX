@@ -1,0 +1,11 @@
+.mission-logo-width {
+  width: 220px;
+}
+
+.mission-link:hover {
+  border: 0.2rem rgb(85, 85, 85);
+  border-radius: 20%;
+  border-style: dashed;
+  color: brown;
+  background-color: rgb(85, 85, 85, 0.2);
+}
