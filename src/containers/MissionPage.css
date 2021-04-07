@@ -8,4 +8,5 @@ ul {
 
 ul li {
   border-bottom: 0.2rem dotted rgb(85, 85, 85, 0.2);
+  font-size: 1.3rem;
 }
