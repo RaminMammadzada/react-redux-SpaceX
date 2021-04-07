@@ -13,7 +13,7 @@ const Filter = (props) => {
   return (
     <div>
       <Form
-        className="d-flex justify-content-start ml-5"
+        className="d-flex flex-wrap justify-content-center ml-5"
       >
         <Form.Group
           controlId="exampleForm.SelectCustom"

@@ -77,8 +77,8 @@ const MissionList = () => {
   return (
     <div>
       <div className="header">
-        <div className="header-navbar">
-          <h1 className="bookstote-cms">Launch Missions</h1>
+        <div className="d-flex flex-column align-items-center">
+          <h1>Launch Missions</h1>
           <Filter handleChange={handleFilterChange} />
         </div>
       </div>
