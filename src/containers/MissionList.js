@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MissionList = () => {
   const { missions, yearFilter, successFilter } = useSelector((state) => state);
@@ -47,15 +48,6 @@ const MissionList = () => {
         (mission) => mission.launch_year.toString() === yearFilter.toString(),
       );
     }
-
-    // if (yearFilter === 'All') {
-    //   currentMissionList = missions.concat();
-    // } else {
-    //   currentMissionList = missions.filter(
-    //     (mission) => mission.launch_year.toString() === yearFilter.toString(),
-    //   );
-    //   console.log('currentMissionList: ', currentMissionList);
-    // }
   };
 
   updateCurrentMissionList(yearFilter, successFilter);
@@ -77,22 +69,29 @@ const MissionList = () => {
   return (
     <div>
       <div className="header">
-        <div className="header-navbar">
-          <h1 className="bookstote-cms">Launch Missions</h1>
+        <div className="d-flex flex-column align-items-center">
+          <h1>Launch Missions</h1>
           <Filter handleChange={handleFilterChange} />
         </div>
       </div>
-      <div>
-        {currentMissionList.map((mission) => (
-          <Mission
-            key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
-            missionImage={mission.links.mission_patch_small}
-            missionName={mission.mission_name}
-            launchYear={mission.launch_year}
-            launchSuccess={mission.launch_success}
-            missionId={mission.flight_number}
-          />
-        ))}
+      <div className="d-flex flex-wrap justify-content-center">
+        {currentMissionList.map((mission) => {
+          let missionImageLink = 'https://via.placeholder.com/250x250/555555/FFFFFF?text=Image+Not+Found';
+          if (mission.links.mission_patch_small !== null) {
+            missionImageLink = mission.links.mission_patch_small;
+          }
+
+          return (
+            <Mission
+              key={`${mission.launch_date_unix}-${mission.static_fire_date_utc}`}
+              missionImage={missionImageLink}
+              missionName={mission.mission_name}
+              launchYear={mission.launch_year}
+              launchSuccess={mission.launch_success}
+              missionId={mission.flight_number}
+            />
+          );
+        })}
       </div>
     </div>
   );
