@@ -3,7 +3,6 @@ import PropType from 'prop-types';
 import { Form } from 'react-bootstrap';
 import years from '../constants/years';
 import successCasesTexts from '../constants/successCasesTexts';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Filter = (props) => {
   const { handleChange } = props;

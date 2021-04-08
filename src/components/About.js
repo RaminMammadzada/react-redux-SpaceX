@@ -8,9 +8,13 @@ class About extends Component {
 
   render() {
     return (
-      <div>
+      <div className="m-5">
         <p>
-          We are not affiliated, associated, authorized, endorsed by,
+          This is a capstone project for React and Redux curriculum in Microverse School.
+          It is designed and implemented by Ramin Mammadzada.
+        </p>
+        <p>
+          I am not affiliated, associated, authorized, endorsed by,
           or in any way officially connected with Space Exploration
           Technologies Inc (SpaceX), or any of its subsidiaries or its affiliates.
           The names SpaceX as well as related names, marks, emblems and images are

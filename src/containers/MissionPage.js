@@ -5,7 +5,6 @@ import ReactPlayer from 'react-player';
 
 import { fetchCurrentMission } from '../actions';
 import './MissionPage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MissionPage = () => {
   const { id } = useParams();

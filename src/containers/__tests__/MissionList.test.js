@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 import MissionList from '../MissionList';
 
-describe('Mission List - ', () => {
+describe('MissionList container - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>
