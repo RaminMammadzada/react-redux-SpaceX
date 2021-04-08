@@ -4,6 +4,21 @@
 
 It is a single-page application to present space exploration missions are done by SpaceX company. [SpaceX Data API](https://docs.spacexdata.com/#intro) is used to get the data. 
 
+## Screenshot
+
+![screenshot](./docs/images/screenshot.png)
+
+
+## Live demo
+
+- [Live demo in Heroku](https://spacex-react-redux.herokuapp.com)
+
+## Video presentation
+
+  - https://www.loom.com/share/f804213ebc3a4b93a9d56caf40bdf404
+
+  - https://www.loom.com/share/228f1dc9eb9b44dba40c2c4c6854810e
+
 
 ## Milestones of the project.
 
@@ -77,20 +92,7 @@ Check if the deployed version of the app is working perfectly. Record your video
   - stylelint-csstree-validator
 - Pure CSS
 - [react-bootstrap](https://react-bootstrap.netlify.app/)
- 
-## Live demo
 
-- [Live demo in Heroku](https://spacex-react-redux.herokuapp.com)
-
-## Video presentation
-
-- [Presentation links](https://gist.github.com/RaminMammadzada/8d06b946c5445d09add7e7120c4fc33a)
-
-## Screenshot
-
-<br>
-
-![screenshot](./docs/images/screenshot.png)
 
 ### Setup
 

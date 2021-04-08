@@ -17,8 +17,6 @@ const Mission = (props) => {
         {' '}
         <h4>{missionName}</h4>
       </Link>
-      {/* <h5>{launchYear}</h5>
-      <h5>{launchSuccess ? 'YES' : 'NO'}</h5> */}
     </div>
   );
 };
