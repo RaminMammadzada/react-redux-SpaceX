@@ -25,7 +25,7 @@ export const setCurrentMission = (currentMission) => ({
   payload: currentMission,
 });
 
-export function fetchData(url) {
+export function fetchAllMissions(url) {
   return function thunk(dispatch) {
     fetch(url).then((response) => response.json())
       .then((json) => {
