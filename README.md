@@ -66,6 +66,7 @@ Check if the deployed version of the app is working perfectly. Record your video
 - [PropTypes](https://www.npmjs.com/package/prop-types)
 - webpack (create-react-app uses it, didn't set it manually)
 - Heroku
+- [Jest](https://jestjs.io/)
 - ESLint
   - eslint-config-airbnb
   - eslint-plugin-jsx-a11y
@@ -79,11 +80,11 @@ Check if the deployed version of the app is working perfectly. Record your video
  
 ## Live demo
 
-- [Click Here]()
+- [Live demo in Heroku](https://spacex-react-redux.herokuapp.com)
 
 ## Video presentation
 
-- Soon will be here.
+- [Presentation links](https://gist.github.com/RaminMammadzada/8d06b946c5445d09add7e7120c4fc33a)
 
 ## Screenshot
 
