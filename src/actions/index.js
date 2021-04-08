@@ -29,7 +29,6 @@ export function fetchAllMissions(url) {
   return function thunk(dispatch) {
     fetch(url).then((response) => response.json())
       .then((json) => {
-        // console.log('DATA: ', json);
         dispatch(setAllMissions(json));
       })
       .catch((error) => console.log('Error: ', error.message));
@@ -40,7 +39,6 @@ export function fetchCurrentMission(url) {
   return function thunk(dispatch) {
     fetch(url).then((response) => response.json())
       .then((json) => {
-        // console.log('DATA: ', json[0]);
         dispatch(setCurrentMission(json[0]));
       })
       .catch((error) => console.log('Error: ', error.message));

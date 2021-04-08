@@ -4,6 +4,21 @@
 
 It is a single-page application to present space exploration missions are done by SpaceX company. [SpaceX Data API](https://docs.spacexdata.com/#intro) is used to get the data. 
 
+## Screenshot
+
+![screenshot](./docs/images/screenshot.png)
+
+
+## Live demo
+
+- [Live demo in Heroku](https://spacex-react-redux.herokuapp.com)
+
+## Video presentation
+
+  - https://www.loom.com/share/295838881c314ce4981503283514a5ae
+
+  - https://www.loom.com/share/228f1dc9eb9b44dba40c2c4c6854810e
+
 
 ## Milestones of the project.
 
@@ -66,6 +81,7 @@ Check if the deployed version of the app is working perfectly. Record your video
 - [PropTypes](https://www.npmjs.com/package/prop-types)
 - webpack (create-react-app uses it, didn't set it manually)
 - Heroku
+- [Jest](https://jestjs.io/)
 - ESLint
   - eslint-config-airbnb
   - eslint-plugin-jsx-a11y
@@ -76,20 +92,7 @@ Check if the deployed version of the app is working perfectly. Record your video
   - stylelint-csstree-validator
 - Pure CSS
 - [react-bootstrap](https://react-bootstrap.netlify.app/)
- 
-## Live demo
 
-- [Click Here]()
-
-## Video presentation
-
-- Soon will be here.
-
-## Screenshot
-
-<br>
-
-![screenshot](./docs/images/screenshot.png)
 
 ### Setup
 

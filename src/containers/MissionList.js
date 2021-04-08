@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
@@ -8,9 +7,6 @@ import { yearChanged, successChanged } from '../actions';
 const MissionList = () => {
   const { missions, yearFilter, successFilter } = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  // successFilter(true);
-
   let currentMissionList;
 
   const updateCurrentMissionList = (yearFilter, successCaseFilter) => {
@@ -96,12 +92,10 @@ const MissionList = () => {
   );
 };
 
-MissionList.propTypes = {
-  // successFilter: PropTypes.func.isRequired,
-};
-
 MissionList.defaultProps = {
   missions: [{}, {}],
+  yearFilter: 2020,
+  successFilter: true,
 };
 
 export default MissionList;
