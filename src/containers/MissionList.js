@@ -94,6 +94,8 @@ const MissionList = () => {
 
 MissionList.defaultProps = {
   missions: [{}, {}],
+  yearFilter: 2020,
+  successFilter: true,
 };
 
 export default MissionList;
