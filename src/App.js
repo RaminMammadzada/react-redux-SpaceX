@@ -2,13 +2,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import Routes from './Routes';
-import { fetchData } from './actions';
+import { fetchAllMissions } from './actions';
 
 const App = () => {
   const dispatch = useDispatch();
 
   const url = 'https://api.spacexdata.com/v3/launches';
-  dispatch(fetchData(url));
+  dispatch(fetchAllMissions(url));
 
   return (
     <Routes />

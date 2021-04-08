@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component -  matches the snapshot 1`] = `
+<div
+  className="navbar sticky-top"
+>
+  <div>
+    <img
+      alt="logo"
+      src="spacex_logo.png"
+    />
+  </div>
+  <div
+    className="nav-links"
+  >
+    <a
+      className="mx-2"
+      href="/missions"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-outline-light"
+        disabled={false}
+        type="button"
+      >
+        Missions
+      </button>
+    </a>
+    <a
+      className="mx-2"
+      href="/about"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-outline-light"
+        disabled={false}
+        type="button"
+      >
+        About
+      </button>
+    </a>
+  </div>
+</div>
+`;

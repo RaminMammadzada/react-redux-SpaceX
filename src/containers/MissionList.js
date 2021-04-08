@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Filter from '../components/Filter';
 import Mission from './Mission';
 import { yearChanged, successChanged } from '../actions';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MissionList = () => {
   const { missions, yearFilter, successFilter } = useSelector((state) => state);

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './Navbar.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../images/spacex_logo.png';
 
 const Navbar = () => (

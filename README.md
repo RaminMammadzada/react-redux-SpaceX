@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Catalogue of Statistics: SpaceX Launch Missions
 
-## Available Scripts
+It is a single-page application to present space exploration missions are done by SpaceX company. [SpaceX Data API](https://docs.spacexdata.com/#intro) is used to get the data. 
 
-In the project directory, you can run:
 
-### `yarn start`
+## Milestones of the project.
 
+### Day 1
+
+**Milestone 1 - project setup**
+
+Select the API you are going to use. Build files structure for your React app. Prepare routes and navigation in your app.
+
+**Milestone 2 - index page with filters**
+
+Make sure that a user can display a list of items and filter them. Data should come from the backend API.
+
+### Day 2
+
+**Milestone 1 - single item page**
+
+Make sure that a user can display a details page for each item. Data should come from the backend API.
+
+**Milestone 2 - styling & testing**
+
+If you need some extra time for adding tests or making your app more beautiful. Now it's the time for this! Also, you can fix any minor bugs that you could have found in your app.
+
+### Day 3
+
+**Milestone 1 - connect to API and receive data**
+
+Work on nice-to have features(s)
+
+**Milestone 2 - deploy & video**
+
+Check if the deployed version of the app is working perfectly. Record your video. You are ready for a code review!
+
+## Build with the following guidelines: 
+
+- Use JSX syntax correctly
+- Pass info to components using props with validation
+- Use React components lifecycle methods
+- Use DOM event listeners in components
+- Use lifting to pass state from children to parent components
+- Use client-side routes
+- Design the components structure for a website
+- Test React code
+- Use Redux store to keep state
+- Connects Redux to React app (includes map state and dispatch to props)
+- Deploy apps (Heroku, Netlify)
+- Use linters (code standards)
+- Maintain professional Github Repos
+
+## Built with the following tech stack
+
+- [Node.js](www.nodejs.org)
+- [npm](https://www.npmjs.com/)
+- [ES6](http://es6-features.org/) 
+- [React](https://reactjs.org/)
+- [React-DOM](https://reactjs.org/docs/react-dom.html)
+- [create-react-app](https://github.com/facebook/create-react-app)
+- [React-Redux](https://github.com/reduxjs/react-redux)
+- [Redux](https://github.com/reduxjs/redux)
+- [PropTypes](https://www.npmjs.com/package/prop-types)
+- webpack (create-react-app uses it, didn't set it manually)
+- Heroku
+- ESLint
+  - eslint-config-airbnb
+  - eslint-plugin-jsx-a11y
+  - eslint-plugin-react
+  - eslint-plugin-react-hooks
+- Stylelint
+  - stylelint-config-standard
+  - stylelint-csstree-validator
+- Pure CSS
+- [react-bootstrap](https://react-bootstrap.netlify.app/)
+ 
+## Live demo
+
+- [Click Here]()
+
+## Video presentation
+
+- Soon will be here.
+
+## Screenshot
+
+<br>
+
+![screenshot](./docs/images/screenshot.png)
+
+### Setup
+
+Clone the repo by typing
+
+```
+git clone https://github.com/RaminMammadzada/react-redux-SpaceX.git
+```
+
+Install packages with
+
+```
+  npm install
+```
+
+Start server with:
+
+```
+  npm start
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Unit tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repo by typing
 
-### `yarn build`
+```
+npm run test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 **Ramin Mammadzada**
 
-### `yarn eject`
+- Github: [@raminmammadzada](https://github.com/raminmammadzada)
+- Twitter: [@raminmammadzada](https://twitter.com/raminmammadzada)
+- Linkedin: [Ramin Mammadzada](https://www.linkedin.com/in/raminmammadzada/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues, and feature requests are welcome!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Feel free to check the [issues page](https://github.com/RaminMammadzada/react-redux-SpaceX/issues)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Show your support
 
-## Learn More
+Give a star if you like this project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
